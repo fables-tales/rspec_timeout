@@ -1,7 +1,8 @@
 # RSpec Timeout.
 
-Stops RSpec from executing if your test suite has an abominbaly long execution
-time.
+RSpec timeout stops you from having a test suite which takes too long to run by
+killing the RSpec process if it takes longer than a certain amount of time to
+complete running the test suite.
 
 ## Installation
 
