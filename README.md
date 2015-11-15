@@ -1,5 +1,8 @@
 # RSpec Timeout.
 
+Stops RSpec from executing if your test suite has an abominbaly long execution
+time.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -31,12 +34,13 @@ end
 This will cause your test suite to fail if it takes more than 120 seconds (the
 default timeout) to execute.
 
-If you'd like to customise the timeout, you can pass the `:timeout` option
-thusly:
+If you'd like to customise the timeout, you can pass the `:timeout` option,
+which specifies how many seconds your test suite stops executing after:
 
 ```ruby
 require "rspec_timeout"
 RSpec.configure do |config|
+  # stop after 2 seconds
   RSpecTimeout.setup(config, :timeout => 2)
 end
 ```
